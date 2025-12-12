@@ -1,0 +1,49 @@
+{
+  "name": "algo-eni",
+  "displayName": "Langage syntaxique pour les Algo - ENI",
+  "description": "Coloration syntaxique et autocompletion des mot clé (.algo)",
+  "version": "0.0.1",
+  "author": "Yun",
+  "publisher": "Yun",
+  "engines": {
+    "vscode": "^1.106.1"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+	"onLanguage:algo"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+	"languages": [
+		{
+			"id": "algo",
+			"aliases": ["Algo", "algorithmique"],
+			"extensions": [
+				".algo"
+			],
+			"configuration": "./language-configuration.json"
+		}
+	],
+	"snippets": [
+		{
+			"language": "algo",
+			"path": "./snippets/algo.json"
+		}
+	]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.106.1",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.39.1",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}

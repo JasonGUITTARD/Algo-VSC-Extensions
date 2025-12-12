@@ -1,0 +1,150 @@
+{
+  "Structure Si Alors Sinon": {
+    "prefix": ["sis", "Sis", "ifs"],
+    "body": [
+      "Si ${1:condition} Alors",
+      "\t${2:# instructions}",
+      "Sinon",
+      "\t${3:# instructions}",
+      "FSi"
+    ],
+    "description": "Structure complète Si / Alors / Sinon / FSi"
+  },
+  "Structure Si Alors": {
+    "prefix": ["si", "Si", "if"],
+    "body": [
+      "Si ${1:condition} Alors",
+      "\t${2:# instructions}",
+      "FSi"
+    ],
+    "description": "Structure complète Si / Alors / Sinon / FSi"
+  },
+  "Boucle Pour classique": {
+    "prefix": ["pour", "Pour", "pa", "for"],
+    "body": [
+      "Pour ${1:i} à ${2:n}",
+      "\t${3:# instructions}",
+      "FPour"
+    ],
+    "description": "Boucle Pour ... FPour (Sans le pas)"
+  },
+  "Boucle Pour avec par": {
+    "prefix": ["pour", "Pour", "pap", "forp"],
+    "body": [
+      "Pour ${1:i} à ${2:n} par ${3:1}",
+      "\t${4:# instructions}",
+      "FPour"
+    ],
+    "description": "Boucle Pour ... FPour (Avec le pas)"
+  },
+  "Boucle TantQue": {
+    "prefix": "tq",
+    "body": [
+      "TantQue ${1:condition}",
+      "\t${2:# instructions}",
+      "FTq"
+    ],
+    "description": "Boucle TantQue ... FTq"
+  },
+  "Algorithme": {
+    "prefix": ["algo", "algorithme", "alg"],
+    "body": [
+      "Algo ${1:NomAlgo}",
+      "\t${2:# variables}",
+      "Début",
+      "\t${3:# corps de l'algorithme}",
+      "Fin"
+    ],
+    "description": "Squelette d'algorithme"
+  },
+  "Aleatoire": {
+	"prefix": ["ran", "random", "al"],
+	"body": [
+		"aléa(${1:inclus}, ${2:exclus})"
+	],
+	"description": "fonction aléatoire"
+  },
+  "Fonction": {
+	"prefix": ["func", "function", "fonction"],
+	"body": [
+		"Fonction ${1:nom}(${2:paramètres}) Retourne ${3:type}",
+		"\t${4:# variables}",
+		"Début",
+		"\t${5:# instructions}",
+		"\tRetourne",
+		"Fin"
+	],
+	"description": "Fonction avec un retour de valeur"
+  },
+  "Procédure": {
+	"prefix": ["proc", "proce", "procedure"],
+	"body": [
+		"Procédure ${1:nom}(${2:paramètres})",
+		"\t${3:# variables}",
+		"Début",
+		"\t${4:# instructions}",
+		"Fin"
+	],
+	"description": "Une fonction sans retour de valeur"
+  },
+  "Switch": {
+	"prefix": ["switch", "sw", "selon", "sel"],
+	"body": [
+		"Selon ${1:variable}",
+		"\tcas ${2:valeur}: ${3:instructions}",
+		"\tautre: ${4:instructions}",
+		"FSelon"
+	],
+	"description": "Switch"
+  },
+  "Entier": {
+	"prefix": "int",
+	"body": [
+		"entier"
+	],
+	"description": "Racourci de programmation pour un entier"
+  },
+  "Réel": {
+	"prefix": "float",
+	"body": [
+		"réel"
+	],
+	"description": "Racourci de programmation pour un réel"
+  },
+  "Texte": {
+	"prefix": "string",
+	"body": [
+		"texte"
+	],
+	"description": "Racourci de programmation pour une chaine de caractères"
+  },
+  "Booléen": {
+	"prefix": "bool",
+	"body": [
+		"booléen"
+	],
+	"description": "Racourci de programmation pour un booléen"
+  },
+  "Caractère": {
+	"prefix": "char",
+	"body": [
+		"caractère"
+	],
+	"description": "Racourci de programmation pour un ecaractère"
+  },
+  "Variable": {
+	"prefix": ["var", "variable", "Variable"],
+	"body": [
+		"Variable ${1:nom} : ${2:type}"
+	],
+	"description": "Genere la ligne de variable"
+  }
+  ,
+  "Cosntante": {
+	"prefix": ["const", "constante", "Constante"],
+	"body": [
+		"Constante ${1:NOM} : ${2:type} <- ${3:valeur}"
+	],
+	"description": "Genere la ligne de la constante"
+  }
+}
